@@ -12,7 +12,7 @@
 
 |URL |内容 |
 |:--|:--|
-|https://caspf.info/ |サイトTOP |
+|https://caspf.info/ |サイトTOP(LP) |
 |https://caspf.info/samplesite/ec/itemdetail |ECサイトサンプル |
 
 ## 使用技術
