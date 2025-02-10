@@ -9,8 +9,6 @@
 
 |URL |内容 |
 |:--|:--|
-|https://caspf.info/ |サイトTOP |
-|https://caspf.info/samplesite/ec/itemdetail |ECサイトサンプル |
 |https://demo.caspf.info/info |API取得サンプル（ヘッドレスCMS） |
 |https://demo.caspf.info/soundroom |API取得サンプル2(Twitter画像) |
 
@@ -34,6 +32,3 @@
 - WordPress APIを用いたヘッドレスCMSでのデータ取得
 - Twitter(X)からの画像取得
 
-### ECサイトサンプルサイト(/samplesite/ec/itemdetail)
-
-- 商品詳細ページ：カラー、サイズ選択機能（選択中のテキストへ即時反映）

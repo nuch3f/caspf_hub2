@@ -11,8 +11,6 @@
 |:--|:--|
 |https://caspf.info/ |サイトTOP |
 |https://caspf.info/samplesite/ec/itemdetail |ECサイトサンプル |
-|https://demo.caspf.info/info |API取得サンプル（ヘッドレスCMS） |
-|https://demo.caspf.info/soundroom |API取得サンプル2(Twitter画像) |
 
 ## 使用技術
 
@@ -23,16 +21,8 @@
 ## 構成
 
 - Next.js(React)
-- 外部API
-  - Wordpress(ヘッドレスCMS)
-  - Twitter
 
 ## 機能一覧
-
-### API取得サンプルサイト(demo)
-
-- WordPress APIを用いたヘッドレスCMSでのデータ取得
-- Twitter(X)からの画像取得
 
 ### ECサイトサンプルサイト(/samplesite/ec/itemdetail)
 
