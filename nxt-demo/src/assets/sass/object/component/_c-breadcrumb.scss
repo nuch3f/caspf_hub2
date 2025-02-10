@@ -1,0 +1,31 @@
+@charset "utf-8";
+@use '../../global/mixin/mixin' as *;
+
+.c-breadcrumb {
+  margin: 30px;
+  font-size: 12px;
+  @include media(sm) {
+    margin: 10px 30px;
+  }
+  @include media(md) {
+    margin: 10px 30px;
+  }
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    &--item {
+      position: relative;
+      &:not(:last-of-type) {
+        margin-right: 30px;
+        &::after {
+          content: '\0bb';
+          position: absolute;
+          top: -8px;
+          right: -22px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
+}

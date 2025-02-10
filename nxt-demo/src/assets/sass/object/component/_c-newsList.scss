@@ -1,0 +1,45 @@
+@charset "utf-8";
+@use '../../global/variable/variables' as v;
+
+.c-newsList {
+  background-color: #525252;
+  padding: 10px 20px 20px;
+  margin-top: 10px;
+  &_item {
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+    &:nth-of-type(n+4) {
+      display: none;
+    }
+    &--link {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: v.$color__font--neon;
+      }
+    }
+    &--info {
+      display: flex;
+      align-items: center;
+    }
+    &--date {
+      font-size: 14px;
+    }
+    &--catname {
+      padding: 1px 8px 2px;
+      border-radius: 10px;
+      background: rgb(151,224,95);
+      background: linear-gradient(90deg, rgba(151,224,95,1) 0%, rgba(14,227,172,1) 100%);
+      font-weight: bold;
+      color: v.$color__font--base;
+      font-size: 12px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    &--title {
+      margin-top: 5px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+  }
+}

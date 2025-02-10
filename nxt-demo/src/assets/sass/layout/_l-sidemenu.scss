@@ -1,0 +1,50 @@
+@charset "utf-8";
+@use '../global/mixin/mixin' as *;
+@use '../global/variable/variables' as *;
+
+.l-gNav {
+  flex-basis: 20%;
+  border-left: 1px solid $color__line--base;
+  background-color: $color__bg--sgray;
+  padding: 20px;
+  position: relative;
+  @include media(sm) {
+    display: none;
+  }
+  @include media(md) {
+    flex-basis: 25%;
+  }
+  &_container {
+    width: 17%;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    @include media(md) {
+      top: 20px;
+      right: 30px;
+    }
+    @media (min-width:1025px) and ( max-width:1500px) {
+      right: 10px;
+    }
+  }
+  &_list {
+    &--item {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+    &--link {
+      display: block;
+      padding: 10px 0;
+      &:hover {
+        background: $c-gradient-start;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, $c-gradient-start, $c-gradient-end);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, $c-gradient-start, $c-gradient-end); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      & > img {
+        width: auto;
+        height: 23px;
+      }
+    }
+  }
+}

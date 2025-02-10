@@ -1,0 +1,169 @@
+.p-ecCart{
+    &_main{
+        max-width: $page-max-width;
+        margin: auto;
+    }
+    &_content{
+        display: flex;
+        justify-content: space-between;
+        @include sp{
+            display: block;
+        }
+    }
+    &_inCart{
+        flex-basis: 64%;
+        @include sp{
+            margin-bottom: 30px;
+        }
+        &--title{
+            font-size: 24px;
+            padding: 10px;
+            background-color: #666;
+            margin-top: 0;
+            color: #fff;
+            @include sp{
+                font-size: 20px;
+            }
+        }
+        &--list{
+            &_item{
+                padding: 20px;
+                border: solid #aaa;
+                border-width: 0 1px 1px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include sp{
+                    padding: 10px $pad-sm;
+                }
+                &:first-of-type{
+                    border-top: 1px solid #aaa;
+                }
+                &--fig{
+                    display: flex;
+                    align-items: center;
+                    &_img{
+                        width: 100px;
+                        @include sp{
+                            width: 60px;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    &_cap{
+                        margin-left: 20px;
+                        @include sp{
+                            margin-left: 10px;
+                        }
+                        &--brandName{
+                            margin: 0;
+                        }
+                        &--itemName{
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin: 0;
+                            @include sp{
+                                font-size: 16px;
+                            }
+                        }
+                        &--itemPrice{
+                            font-size: 18px;
+                            margin: 0;
+                        }
+                    }
+                }
+                &--del{
+                    &_btn{
+                        font-size: 12px;
+                        position: relative;
+                        &::before,
+                        &::after{
+                            position: absolute;
+                            top: -25px;
+                            left: 10px;
+                            width: 1px;
+                            height: 20px;
+                            content: "";
+                            background-color: #666;  
+                        }
+                        &::before{
+                            transform: rotate(45deg);
+                        }
+                        &::after{
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_cartSummary{
+        flex-basis: 32%;
+        &--wrapper{
+            background-color: #ccc;
+            margin-bottom: 30px;
+        }
+        &--title{
+            font-size: 24px;
+            padding: 10px;
+            margin: 0;
+            background-color: #666;
+            color: #fff;
+            @include sp{
+                font-size: 20px;
+            }
+        }
+        &--dlist{
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @include sp{
+                padding: 20px $pad-sm;
+            }
+            dt,dd{
+                flex-basis: 50%;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            dd{
+                margin-inline-start: 0;
+                text-align: right;
+                font-size: 20px;
+            }
+            &_total{
+                border-top: 1px solid #000;
+                padding-top: 10px;
+                font-weight: bold;
+            }
+        }
+        &--notice{
+            text-align: center;
+            &_num{
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+    &_info{
+        margin-bottom: 30px;
+        &--text{
+            font-size: 16px;
+            &_num{
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+    }
+    &_recommend{
+        &--title{
+            margin: 0 0 20px;
+            font-size: 20px;
+        }
+        .c-itemCell_fig--status{
+            display: none;
+        }
+    }
+}

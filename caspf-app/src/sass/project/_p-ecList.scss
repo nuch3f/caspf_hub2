@@ -1,0 +1,97 @@
+.p-ecList{
+    &_main{
+        &--container{
+            display: flex;
+            justify-content: space-between;
+            @include sp{
+                display: block;
+            }
+        }
+        &--listWrapper{
+            flex-basis: 75%;
+        }
+        &--title{
+            font-size: 40px;
+            margin: 0 0 30px;
+            @include sp{
+                font-size: 28px;
+            }
+        }
+        &--headingContent{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #666;
+            &_counter{
+                font-size: 20px;
+                &--num{
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            }
+            &_selectOrder{
+                select{
+                    font-size: 20px;
+                    padding: 10px 15px;
+                    border-radius: 6px;
+                }
+            }
+        }
+        &--listContainer{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #666;
+            & > .c-itemCell{
+                width: 24%;
+                margin-bottom: 40px;
+                @include sp{
+                    width: 49%;
+                }
+                &:not(:nth-of-type(4n + 1)){
+                    margin-left: 1.333%;
+                    @include sp{
+                        margin-left: 0;
+                    }
+                }
+                &:nth-of-type(2n){
+                    @include sp{
+                        margin-left: 2%;
+                    }
+                }
+            }
+        }
+        &--bottom{
+            margin-top: 10px;
+            &_paging{
+                display: flex;
+                justify-content: flex-end;
+                &--item{
+                    font-size: 18px;
+                    font-weight: bold;
+                    
+                    border: 1px solid #666;
+                    &.active{
+                        padding: 2px 6px;
+                        background: #666;
+                        color: #fff;
+                    }
+                    &.inactive{
+                        padding: 2px 6px;
+                        color: #aaa;
+                    }
+                    &:not(:first-of-type){
+                        margin-left: 10px;
+                    }
+                    & > a{
+                        display: block;
+                        padding: 2px 6px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

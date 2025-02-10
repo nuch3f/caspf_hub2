@@ -1,0 +1,387 @@
+.p-ecDetail{
+    &_main{
+        &--container{
+            display: flex;
+            justify-content: space-between;
+            //width: 75vw;
+            max-width: $page-max-width;
+            margin: 0 auto 15vh;
+            @include sp{
+                max-width: 100%;
+                display: block;
+            }
+        }
+    }
+    &_left{
+        flex-basis: 42%;
+        &--slider{
+            width: 535px;
+            @include sp{
+                width: 100%;
+            }
+            &_list{
+                &--item{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            &_thumblist{
+                &--item{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &--coordinate{
+            @include sp{
+                display: none;
+            }
+            &_list{
+                display: flex;
+                margin-bottom: 30px;
+                &--item{
+                    width: 24%;
+                    &:not(:first-of-type){
+                        margin-left: 1%;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &--model{
+            margin-bottom: 30px;
+            @include sp{
+                display: none;
+            }
+            &_fig{
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                &--img{
+                    width: 80px;
+                    flex-basis: 80px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &--figcap{
+                    flex-basis: calc(100% - 100px);
+                    margin-left: 20px;
+                    &_itemsize,
+                    &_modelsize{
+                        margin: 0 0 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+            &_comment{
+                border: 2px solid #000;
+                background-color: #f4f4f4;
+                border-radius: 10px;
+                position: relative;
+                padding: 20px;
+                @include sp{
+                    display: none;
+                }
+                &::before{
+                    position: absolute;
+                    top: -12px;
+                    left: 30px;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: #f4f4f4;;
+                    border-top: 2px solid #000;
+                    border-left: 2px solid #000;
+                    transform: rotate(45deg);
+                }
+                &--title{
+                    font-size: 16px;
+                    margin: 0;
+                }
+                &--txt{
+                    margin: 10px 0 0;
+                    font-size: 14px;
+                }
+
+            }
+        }
+        &--fits{
+            @include sp{
+                display: none;
+            }
+            &_table{
+                border-collapse: collapse;
+                th, td{
+                    width: 120px;
+                    padding: 20px;
+                    font-size: 16px;
+                    border: solid #aaa;
+                    border-width: 0 1px 1px 0;
+                    text-align: center;
+                }
+                th{
+                    border-left: 1px solid #aaa;
+                    background-color: #E1DFDF;
+                }
+                td{
+                    &.is-selected{
+                        background-color: #666;
+                        color: #fff;
+                    }
+                }
+                tr:first-of-type{
+                    th, td{
+                        border-top: 1px solid #aaa;
+                    }
+                }
+            }
+        }
+    }
+    &_right{
+        flex-basis: 55%;
+        &--heading{
+            margin-bottom: 100px;
+            &_brandName{
+                font-size: 12px;
+                margin: 0 0 10px;
+            }
+            &_itemName{
+                font-size: 28px;
+                margin: 0 0 10px;
+                overflow-wrap: break-word;
+            }
+            &_price{
+                font-size: 20px;
+                font-weight: bold;
+                margin: 0 0 10px;
+                & > span{
+                    display: inline-block;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+            }
+            &_color{
+                &--list{
+                    display: flex;
+                    &_item{
+                        &:not(:first-of-type){
+                            margin-left: 10px;
+                        }
+                        input[type="radio"]{
+                            display: none;
+                            &:checked + label{
+                                border: 2px solid #aaa;
+                            }
+                        }
+                        label{
+                            display: inline-block;
+                            height: 40px;
+                            border: 2px solid #F2F4F3;
+                            & img{
+                                width: 40px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            &_size{
+                margin-bottom: 30px;
+                &--list{
+                    display: flex;
+                    &_item{
+                        &:not(:first-of-type){
+                            margin-left: 14px;
+                        }
+                        input[type="radio"]{
+                            display: none;
+                            &:checked + label{
+                                border: 2px solid #000;
+                                background-color: #fff;
+                            }
+                        }
+                        label{
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            border: 2px solid #ccc;
+                            font-size: 20px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            padding: 3px 0;
+                        }
+                    }
+                }
+            }
+            &_stock{
+                display: inline-block;
+                text-decoration: underline;
+                margin-bottom: 30px;
+            }
+            &_quantity{
+                margin-bottom: 30px;
+                select{
+                    width: 100px;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        &--tabContent{
+            &_tabList{
+                display: flex;
+                &--item{
+                    width: 50%;
+                    border: none;
+                    border-width: 1px 1px 1px 0;
+                    font-size: 20px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background-color: #aaa;
+                    color: #666;
+                    @include sp{
+                        font-size: 16px;
+                    }
+                    &:first-of-type{
+                        border-left: 1px solid #aaa;
+                    }
+                    &.react-tabs__tab--selected{
+                        font-weight: bold;
+                    }
+                    &:focus-visible{
+                        outline: none;
+                    }
+                }
+            }
+            &_dataContent{
+                padding: 30px;
+                border: solid #aaa;
+                border-width: 0 1px 1px;
+                background-color: #fff;
+                @include sp{
+                    padding: 20px $pad-sm;
+                }
+                &.size{
+                    //display: none;
+                    & > table{
+                        width: 100%;
+                        border-collapse: collapse;
+                        tr{
+                            &:first-of-type{
+                                th{
+                                    border-top: 1px solid #dcdcdc;
+                                    background-color: #aaa;
+                                }
+                            }
+                        }
+                        th, td{
+                            width: 20%;
+                            padding: 20px 0;
+                            text-align: center;
+                            border: solid #dcdcdc;
+                            border-width: 0 1px 1px 0;
+                            
+                        }
+                        th{
+                            &:first-of-type{
+                                border-left: 1px solid #dcdcdc;
+                                background-color: #aaa;
+                            }
+                        }
+                    }
+                }
+                &_title{
+                    font-size: 18px;
+                }
+                &_text{
+                    font-size: 16px;
+                    line-height: 2;
+                }
+                &_info{
+                    border: 1px solid #555;
+                    background-color: #ddd;
+                    padding: 10px 30px;
+                    width: 80%;
+                    margin-top: 30px;
+                    box-sizing: border-box;
+                    @include sp{
+                        width: 100%;
+                        padding: 10px;
+                    }
+                    & > dl{
+                        display: flex;
+                        flex-wrap: wrap;
+                        dt{
+                            flex-basis: 40%;
+                            @include sp{
+                                font-size: 12px;
+                            }
+                        }
+                        dd{
+                            flex-basis: 60%;
+                            margin-inline-start: 0;;
+                            position: relative;
+                            @include sp{
+                                font-size: 12px;
+                            }
+                            &::before{
+                                position: absolute;
+                                top: 0;
+                                left: -10px;
+                                content: ": ";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    &_recommend{
+        max-width: $page-max-width;
+        margin: auto;
+        &--title{
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 0 10px;
+            @include sp{
+                font-size: 20px;
+            }
+        }
+        &--list{
+            display: flex;
+            margin-bottom: 10vh;
+            @include sp{
+                flex-wrap: wrap;
+            }
+            & > .c-itemCell{
+                width: 24%;
+                @include sp{
+                    width: 49%;
+                }
+                &:not(:first-of-type){
+                    margin-left: 1%;
+                    @include sp{
+                        margin-left: 0;
+                    }
+                }
+                &:nth-of-type(even){
+                    @include sp{
+                        margin-left: 2%;
+                    }
+                }
+                &:nth-of-type(n + 6){
+                    display: none;
+                    @include sp{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

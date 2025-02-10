@@ -1,0 +1,8 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L] 
+RewriteRule ^/demo$ https://caspf.info/demo/index.html [L,R=301] 
+RewriteRule ^/demo/soundroom$ https://caspf.info/demo/soundroom.html [L,R=301] 
+RewriteRule ^/demo/info$ https://caspf.info/demo/info.html [L,R=301] 
+RewriteRule ^/demo/info/detail$ https://caspf.info/demo/info/detail.html [L,R=301] 

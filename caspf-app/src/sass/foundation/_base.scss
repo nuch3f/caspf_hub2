@@ -1,0 +1,34 @@
+html {
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+  }
+  
+  body {
+    font-family: $base-font-family;
+    line-height: 1.5;
+    color: $font-color;
+    background-color: $base-bg-color;
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    &:link, &:visited{
+      color: inherit;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  ul,ol{
+    list-style-type: none;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  figure{
+    margin: 0;
+  }

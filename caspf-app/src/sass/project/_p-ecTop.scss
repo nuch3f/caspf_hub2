@@ -1,0 +1,176 @@
+.p-ecTop{
+    &_common{
+        &--title{
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+    &_Mv{
+        margin-bottom: 15vh;
+        @include sp{
+            margin-bottom: 30px;
+        }
+        &--list{
+            &_item{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .swiper-pagination-bullets{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .swiper-pagination-bullet{
+            &-active{
+                background-color: #fff;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+    &_newArrival{
+        margin-bottom: 15vh;
+        &--list{
+            display: flex;
+            margin-bottom: 10vh;
+            @include sp{
+                flex-wrap: wrap;
+            }
+            & > .c-itemCell{
+                width: 24%;
+                @include sp{
+                    width: 49%;
+                }
+                &:not(:first-of-type){
+                    margin-left: 1%;
+                }
+                &:nth-of-type(n + 6){
+                    display: none;
+                    @include sp{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &_ranking{
+        margin-bottom: 15vh;
+        &--list{
+            display: flex;
+            margin-bottom: 10vh;
+            @include sp{
+                flex-wrap: wrap;
+            }
+            & > .c-itemCell{
+                width: 24%;
+                @include sp{
+                    width: 49%;
+                }
+                &:not(:first-of-type){
+                    margin-left: 1%;
+                }
+                .c-itemCell_fig--img_rank{
+                    display: block;
+                }
+                &:first-of-type{
+                    .c-itemCell_fig--img_rank::after{
+                        border-top: 50px solid gold;
+                        border-left: 50px solid gold;
+                        @include sp{
+                            border-top: 24px solid gold;
+                            border-left: 24px solid gold;
+                        }
+                    }
+                }
+                &:nth-of-type(2){
+                    .c-itemCell_fig--img_rank::after{
+                        border-top: 50px solid silver;
+                        border-left: 50px solid silver;
+                        @include sp{
+                            border-top: 24px solid silver;
+                            border-left: 24px solid silver;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    .c-itemCell_fig--img_rank::after{
+                        border-top: 50px solid chocolate;
+                        border-left: 50px solid chocolate;
+                        @include sp{
+                            border-top: 24px solid chocolate;
+                            border-left: 24px solid chocolate;
+                        }
+                    }
+                }
+                &:nth-of-type(n + 6){
+                    display: none;
+                    @include sp{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &_collection{
+        margin-bottom: 15vh;
+        &--banner{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &_topics{
+        margin-bottom: 10vh;
+        &--list{
+            display: flex;
+            margin-bottom: 10vh;
+            @include sp{
+                display: block;
+            }
+            & > .c-topicCell{
+                width: 32%;
+                @include sp{
+                    width: 100%;
+                }
+                &:not(:first-of-type){
+                    margin-left: 2%;
+                    @include sp{
+                        margin-left: 0;
+                    }
+                }
+                &:nth-of-type(n+4){
+                    display: none;
+                }
+            }
+        }
+    }
+    &_brand{
+        &--list{
+            display: flex;
+            justify-content: center;
+            &_item{
+                @include sp{
+                    width: 33%;
+                }
+                &:not(:first-of-type){
+                    margin-left: 20px;
+                }
+                img{
+                    width: 100%;
+                }
+                &--brandname{
+                    font-weight: bold;
+                    margin: 0;
+                    text-align: center;
+                    @include sp{
+                        font-size: 12px;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}

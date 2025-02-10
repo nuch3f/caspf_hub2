@@ -1,0 +1,76 @@
+.c-itemCell{
+    & a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    &_fig{
+        &--status{
+            margin: 0 0 10px;
+            display: block;
+            min-height: 22px;
+            font-size: 12px;
+            font-weight: bold;
+            color: red;
+        }
+        &--img{
+            position: relative;
+            &_rank{
+                display: none;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                &::after{
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    content: "";
+                    border: 50px solid transparent;
+                    border-top: 50px solid #999;
+                    border-left: 50px solid #999;
+                    @include sp{
+                        border: 24px solid transparent;
+                        border-top: 24px solid #999;
+                        border-left: 24px solid #999;
+                    }
+                }
+                span{
+                    position: relative;
+                    z-index: 3;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding-left: 15px;
+                    @include sp{
+                        font-size: 14px;
+                        padding-left: 0;
+                    }
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+        
+        &--cap{
+            &_brandname{
+                margin: 0 0 10px;
+                font-size: 12px;
+            }
+            &_itemname{
+                margin: 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            &_price{
+                margin: 0 0 10px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .tax{
+                font-size: 12px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,389 @@
+@charset "utf-8";
+@use '../../global/mixin/mixin' as *;
+@use '../../global/variable/variables' as v;
+
+.p-top {
+  &_mv {
+    height: 100vh;
+    background-color: v.$color__bg--dgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include media(md) {
+      height: 40vh;
+    }
+    &--hero {
+      width: 100%;
+      max-width: 80vw;
+      @include media(sm) {
+        max-width: unset;
+      }
+      @include media(md) {
+        width: 100%;
+        max-width: 75vw;
+        height: 100%;
+      }
+      video {
+        width: auto;
+        height: 100vh;
+        @include media(sm) {
+          width: auto;
+          height: 100%;
+          transform: translateX(-25%);
+        }
+        @include media(md) {
+          width: auto;
+          height: 100%;
+          transform: translateX(-10%);
+        }
+        @media (min-width:746px) and ( max-width:2300px) {
+					width: auto;
+          height: 100%;
+				}
+      }
+    }
+    &--title {
+      position: absolute;
+      bottom: 50%;
+      left: 25%;
+      font-size: 10vw;
+      color: v.$color__font--white;
+      @include media(sm) {
+        top: 40%;
+        left: 5%;
+      }
+      @include media(md) {
+        bottom: unset;
+        top: 20%;
+        font-size: 9vw;
+      }
+      img {
+        height: 350px;
+        @include media(sm) {
+          width: auto;
+          height: 38vw;
+        }
+        @media (min-width:746px) and ( max-width:2300px) {
+          height: 15vw;
+        }
+      }
+    }
+  }
+  &_nbox {
+   margin-top: -10px;
+  }
+  &_game {
+    padding: 40px;
+    @include media(sm) {
+      padding: 5%;
+    }
+    @include media(md) {
+      padding: 10px 30px 30px;
+    }
+    &--list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 80px);
+      grid-column-gap: 40px;
+      grid-row-gap: 20px;
+      @include media(sm) {
+        display: block;
+      }
+      @include media(md) {
+        display: block;
+      }
+    }
+    &--list_item {
+      background-color: #ccc;
+      overflow: hidden;
+      &:not(:last-of-type) {
+        @include media(sm) {
+          margin-bottom: 10px;
+        }
+        @include media(md) {
+          margin-bottom: 10px;
+        }
+      }
+      &.gfirst {
+        grid-area: 1 / 1 / 6 / 2;
+        @include media(sm) {
+          height: 300px;
+        }
+        @include media(md) {
+          height: 300px;
+        }
+      }
+      &.gsecond {
+        grid-area: 1 / 2 / 4 / 3;
+        @include media(sm) {
+          height: 200px;
+        }
+        @include media(md) {
+          height: 200px;
+        }
+      }
+      &.gthird {
+        grid-area: 4 / 2 / 6 / 3;
+        @include media(sm) {
+          height: 150px;
+        }
+        @include media(md) {
+          height: 150px;
+        }
+      }
+      &--link {
+        opacity: 0.5;
+        filter: blur(4px);
+        transition: all 0.3s;
+        @include media(sm) {
+          filter: none;
+          opacity: 1;
+        }
+        @include media(md) {
+          filter: none;
+          opacity: 1;
+        }
+      }
+      &--link:hover {
+        opacity: 1;
+        filter: none;
+      }
+    }
+    &--fig {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+      //filter: grayscale(1);
+      @include media(sm) {
+        filter: none;
+        justify-content: flex-start;
+        align-items: end;
+      }
+      @include media(md) {
+        filter: none;
+        justify-content: flex-start;
+        align-items: end;
+      }
+      .gfirst & {
+        background: url('/assets/img/top/bnr_game_itaco.jpg') no-repeat;
+        background-size: cover;
+        background-position-y: center;
+      }
+      .gsecond & {
+        background: url('/assets/img/top/bnr_game_mad.jpg') no-repeat;
+        background-size: cover;
+        background-position-y: center;
+      }
+      .gthird & {
+        background: url('/assets/img/top/bnr_game_other.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      &:hover {
+        filter: none;
+        justify-content: left;
+        align-items: end;
+        padding: 0 0 10px 10px;
+        background-size: 110%;
+        @media (min-width:1025px) and ( max-width:1600px) {
+          background-size: 150%;
+        }
+        .p-top_game--fig_title--en {
+          .gfirst & {
+            background: url('/assets/img/top/txt_g_itaco_en_on.svg') no-repeat;
+          }
+          .gsecond & {
+            background: url('/assets/img/top/txt_g_mad_en_on.svg') no-repeat;
+          }
+          .gthird & {
+            background: url('/assets/img/top/txt_g_other_en_on.svg') no-repeat;
+          }
+        }
+        .p-top_game--fig_title--jp {
+          .gfirst & {
+            background: url('/assets/img/top/txt_g_itaco_jp_on.svg') no-repeat;
+          }
+          .gsecond & {
+            background: url('/assets/img/top/txt_g_mad_jp_on.svg') no-repeat;
+          }
+          .gthird & {
+            background: url('/assets/img/top/txt_g_other_jp_on.svg') no-repeat;
+          }
+        }
+      }
+      &_title {
+        @include media(sm) {
+          padding: 0 0 10px 10px;
+        }
+        @include media(md) {
+          padding: 0 0 10px 10px;
+        }
+      }
+      &_title--en {
+        width: 400px;
+        @include media(sm) {
+          width: 200px;
+        }
+        @include media(md) {
+          width: 200px;
+        }
+        .gfirst & {
+          height: 100px;
+          background: url('/assets/img/top/txt_g_itaco_en_off.svg') no-repeat;
+          @include media(sm) {
+            height: 50px;
+          }
+          @include media(md) {
+            height: 50px;
+          }
+        }
+        .gsecond & {
+          height: 42px;
+          background: url('/assets/img/top/txt_g_mad_en_off.svg') no-repeat;
+          @include media(sm) {
+            height: 30px;
+          }
+          @include media(md) {
+            height: 30px;
+          }
+        }
+        .gthird & {
+          height: 42px;
+          background: url('/assets/img/top/txt_g_other_en_off.svg') no-repeat;
+          @include media(sm) {
+            height: 30px;
+          }
+          @include media(md) {
+            height: 30px;
+          }
+        }
+      }
+      &_title--jp {
+        width: 400px;
+        height: 20px;
+        margin-top: 10px;
+        @include media(sm) {
+          width: 200px;
+          margin-top: 0;
+        }
+        @include media(md) {
+          width: 200px;
+          margin-top: 0;
+        }
+        .gfirst & {
+          background: url('/assets/img/top/txt_g_itaco_jp_off.svg') no-repeat;
+          background-position: center;
+          margin-top: 30px;
+          @include media(sm) {
+            margin-top: 10px;
+            background-position: left;
+          }
+          @include media(md) {
+            margin-top: 10px;
+            background-position: left;
+          }
+        }
+        .gsecond & {
+          background: url('/assets/img/top/txt_g_mad_jp_off.svg') no-repeat;
+          background-position: center;
+          @include media(sm) {
+            margin-top: 0;
+            background-position: left;
+          }
+          @include media(md) {
+            margin-top: 0;
+            background-position: left;
+          }
+        }
+        .gthird & {
+          background: url('/assets/img/top/txt_g_other_jp_off.svg') no-repeat;
+          background-position: center;
+          @include media(sm) {
+            margin-top: 0;
+            background-position: left;
+          }
+          @include media(md) {
+            margin-top: 0;
+            background-position: left;
+          }
+        }
+      }
+    }
+    
+  }
+  &_studio {
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    padding: 40px;
+    @include media(sm) {
+      //background-color: #525252;
+      padding: 5%;
+    }
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      @include media(sm) {
+        display: block;
+      }
+      &_item {
+        flex-basis: calc((100% - 40px) / 2);
+        height: 200px;
+        background-color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        //filter: grayscale(1);
+        //filter: blur(6px);
+        transition: all 0.5s;
+        @include media(sm) {
+          height: auto;
+          filter: none;
+        }
+        @include media(md) {
+          flex-basis: calc((100% - 10px) / 2);
+          height: auto;
+          filter: none;
+        }
+        &:first-of-type {
+          @include media(sm) {
+            margin-bottom: 20px;
+          }
+        }
+        &:hover {
+          filter: none;
+        }
+        a {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+          @include media(sm) {
+            height: auto;
+          }
+          @include media(md) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  &_sns {
+    &--list {
+      display: flex;
+      justify-content: center;
+      &_item {
+        width: 60px;
+        height: 60px;
+        & + & {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

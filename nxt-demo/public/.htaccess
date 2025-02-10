@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^/info/$ https://demo.caspf.info/info.html [L,R=301]

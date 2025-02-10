@@ -1,0 +1,14 @@
+@charset "utf-8";
+@use '../global/mixin/mixin' as *;
+@use '../global/variable/variables' as v;
+
+.l-footer {
+  background-color: v.$color__bg--black;
+  color: v.$color__font--white;
+  padding: 20px 0;
+  text-align: center;
+  @include media(sm) {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}

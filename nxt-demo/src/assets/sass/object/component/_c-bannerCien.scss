@@ -1,0 +1,42 @@
+@charset "utf-8";
+@use '../../global/mixin/mixin' as *;
+@use '../../global/variable/variables' as *;
+
+.c-banner {
+  margin: 60px auto;
+  width: 640px;
+  height: 140px;
+  background-color: #999;
+  @include media(sm) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+  }
+  @include media(md) {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  & + & {
+    @include media(md) {
+      margin-left: 20px;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-width;
+    margin: auto;
+    @include media(sm) {
+      display: block;
+      margin-top: 30px;
+    }
+    @include media(md) {
+      margin-top: 20px;
+    }
+  }
+}

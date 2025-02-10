@@ -1,0 +1,23 @@
+.c-topicCell{
+    &_fig{
+        &--img{
+            img{
+                width: 100%;
+            }
+        }
+        &--cap{
+            padding: 10px;
+            font-feature-settings: "palt";
+            &_title{
+                font-weight: bold;
+                font-size: 18px;
+                margin: 5px 0;
+            }
+            &_excerpt{
+                font-size: 16px;
+                line-height: 2;
+                margin-top: 10px;
+            }
+        }
+    }
+}

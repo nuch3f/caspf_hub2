@@ -1,0 +1,57 @@
+@charset "utf-8";
+@use '../../global/mixin/mixin' as *;
+@use '../../global/variable/variables' as *;
+
+.p-snd {
+  &_container {
+    margin: 30px;
+  }
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: $max-width;
+    margin: 0 auto;
+    @include media(sm) {
+      display: block;
+      max-width: 100%;
+    }
+    &--item {
+      width: calc((100% - 30px) / 3);
+      //max-width: 645px;
+      max-width: 430px;
+      margin-bottom: 20px;
+      @include media(sm) {
+        width: 100%;
+        max-width: 100%;
+      }
+      @include media(md) {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+      @media (min-width:1025px) and ( max-width:1500px) {
+        width: calc((100% - 10px) / 2);
+        margin-bottom: 10px;
+        max-width: 100%;
+      }
+    }
+  }
+  &_bnr {
+    max-width: $max-width;
+    margin: 0 auto 60px;
+    @include media(sm) {
+      margin-bottom: 30px
+    }
+    img {
+      @include media(sm) {
+        width: 100%;
+        height: auto;
+      }
+      @include media(md) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
