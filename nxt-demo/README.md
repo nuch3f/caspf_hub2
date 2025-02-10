@@ -2,7 +2,10 @@
 
 ## 概要
 
+![Image](https://github.com/user-attachments/assets/c61253e6-fef6-4aa3-9947-5e0ac55d9866)
+
 - 個人ポートフォリオサイトです。スマホ・レスポンシブ対応。
+- こちらには、外部APIからのデータ取得に関するデモサイトのソースが含まれます。
 
 
 ## URL
