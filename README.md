@@ -2,6 +2,8 @@
 
 ## 概要
 
+![Image](https://github.com/user-attachments/assets/63e68c24-982f-4e02-ab48-10d62861c9be)
+
 - 個人ポートフォリオサイトです。スマホ・レスポンシブ対応。
 
 
